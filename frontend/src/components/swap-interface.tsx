@@ -10,6 +10,7 @@ import {
   formatPercentage,
   isValidAmount,
 } from "../utils/formatters";
+import { useLogs } from "@/hooks/use-logs";
 
 const SwapInterface = () => {
   const [tokenIn, setTokenIn] = useState<keyof typeof TOKEN>("CAMP");
@@ -25,6 +26,8 @@ const SwapInterface = () => {
   const [swapData, setSwapData] = useState<ReturnType<
     ReturnType<typeof useSwap>["calculateSwap"]
   > | null>(null);
+
+  useLogs(BigInt(100));
 
   // Calculate swap when inputs change
   useEffect(() => {

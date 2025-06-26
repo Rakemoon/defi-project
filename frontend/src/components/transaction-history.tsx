@@ -10,7 +10,11 @@ import {
   Search,
   RefreshCw,
 } from "lucide-react";
-import { useAccount, useWatchContractEvent, usePublicClient } from "wagmi";
+import {
+  useAccount,
+  useWatchContractEvent,
+  usePublicClient,
+} from "wagmi";
 import {
   formatTokenAmount,
   formatTime,
@@ -76,7 +80,8 @@ const TransactionHistory = () => {
 
     try {
       const currentBlock = await publicClient.getBlockNumber();
-      const startBlock = fromBlock || currentBlock - BigInt(50); // Only last 50 blocks
+      let startBlock = (fromBlock || currentBlock) - BigInt(50); // Only last 50 blocks
+      if (startBlock < BigInt(0)) startBlock = BigInt(0);
 
       console.log(
         `Fetching transactions from block ${startBlock} to ${currentBlock}`

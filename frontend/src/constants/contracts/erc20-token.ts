@@ -1,5 +1,5 @@
 export const campBalanceOpt = {
-  address: "0x0902d7D6CcF82b4900161C046Ea0f059806E05F1",
+  address: process.env.NEXT_PUBLIC_CAMP_ADDRESS! as `0x${string}`,
   name: "Zuz Coin",
   symbol: "ZUZ",
   logo: "📖",
@@ -7,7 +7,7 @@ export const campBalanceOpt = {
 } as const;
 
 export const usdcBalanceOpt = {
-  address: "0x4c23aDbA6Db5d67FECe4B70C043FDA0f07187F59",
+  address: process.env.NEXT_PUBLIC_USDC_ADDRESS! as `0x${string}`,
   name: "USD Coin",
   symbol: "USDC",
   logo: "💲",
@@ -15,6 +15,6 @@ export const usdcBalanceOpt = {
 } as const;
 
 export const TOKEN = {
-    CAMP: campBalanceOpt,
-    USDC: usdcBalanceOpt
-}
+  CAMP: campBalanceOpt,
+  USDC: usdcBalanceOpt,
+};

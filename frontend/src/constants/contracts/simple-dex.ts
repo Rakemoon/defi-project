@@ -427,7 +427,7 @@ export const simpleDexAbi = [
   },
 ] as const;
 
-export const simpleDexAddress = "0xE26a2b8614CfaB4d4e5ed3F2f8CA56c1D896a3fD";
+export const simpleDexAddress = process.env.NEXT_PUBLIC_SIMPLE_DEX_ADDRESS! as `0x${string}`;
 export const DEX_CONFIG = {
   FEE_PERCENT: 0.3, // 0.3%
   SLIPPAGE_TOLERANCE: 0.5, // 0.5%

@@ -3,13 +3,13 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
-import { monadTestnet } from "wagmi/chains";
+import { monadTestnet, anvil } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const wagmiConfig = getDefaultConfig({
   appName: "Simple Defi",
   projectId: "383bde0d30cde408c7f223876495f1b1",
-  chains: [monadTestnet],
+  chains: [monadTestnet, anvil],
   ssr: true,
 });
 

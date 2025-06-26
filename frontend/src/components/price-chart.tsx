@@ -18,6 +18,7 @@ import {
   simpleDexAbi,
   simpleDexAddress,
 } from "@/constants/contracts/simple-dex";
+import { syncIndexerAction } from "@/actions/sync-indexer";
 
 type PriceData = {
   timestamp: number;
@@ -125,7 +126,7 @@ const PriceChart = () => {
             { name: "tokenAtoB", type: "bool", indexed: false },
           ],
         },
-        fromBlock,
+        fromBlock: currentBlock,
         toBlock: currentBlock,
       });
 
@@ -142,7 +143,7 @@ const PriceChart = () => {
             { name: "liquidity", type: "uint256", indexed: false },
           ],
         },
-        fromBlock,
+        fromBlock: currentBlock,
         toBlock: currentBlock,
       });
 
@@ -158,7 +159,7 @@ const PriceChart = () => {
             { name: "liquidity", type: "uint256", indexed: false },
           ],
         },
-        fromBlock,
+        fromBlock: currentBlock,
         toBlock: currentBlock,
       });
 
@@ -517,7 +518,7 @@ const PriceChart = () => {
                   style={{ color: getPriceChangeColor() }}
                 >
                   {priceChange >= 0 ? "+" : ""}
-                    {formatNumber(priceChange, 2)}%
+                  {formatNumber(priceChange, 2)}%
                 </span>
               </div>
             </div>
@@ -755,6 +756,7 @@ const PriceChart = () => {
           </span>
         </div>
       </div>
+      <button onClick={() => syncIndexerAction()}>haha</button>
     </div>
   );
 };

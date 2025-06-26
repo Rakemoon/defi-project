@@ -121,7 +121,8 @@ const LiquidityInterface = () => {
     } else {
       setLiquidityData(null);
     }
-  }, [amountA, amountB, activeTab, calculateAddLiquidity]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [amountA, amountB, activeTab]);
 
   const handleMaxA = () => {
     const balance =
