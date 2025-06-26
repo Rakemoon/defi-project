@@ -9,6 +9,7 @@ const Header = () => {
           <div className="relative">
             <div className="flex items-center space-x-1 p-2 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-white/10">
               <Image
+                className="mx-auto"
                 width={32}
                 height={32}
                 src="/nad-trade-logo.png"

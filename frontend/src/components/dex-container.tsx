@@ -54,7 +54,7 @@ const DEXContainer = () => {
     return (
       <main className="min-h-screen flex items-center justify-center px-6">
         <div className="glass card-hover rounded-2xl p-12 max-w-2xl mx-auto text-center">
-          <div className="text-8xl mb-6 float-animation">
+          <div className="text-8xl mb-6 float-animation flex justify-center">
             <Image
               width={96}
               height={96}
