@@ -3,7 +3,7 @@ import "./globals.css";
 import { Providers } from "@/providers";
 
 export const metadata: Metadata = {
-  title: "Dexu - Dex Exchanger",
+  title: "NadTrade - Dex Exchanger",
   description: "PLUS ULTRA EXCHANGER",
 };
 
